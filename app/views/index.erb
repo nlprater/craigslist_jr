@@ -1,14 +1,15 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h1>Seanslist</h1>
+  <p>All Categories</p>
 
   <table>
     <tr>
-      <th>File Description</th>
-      <th>File Location</th>
+      <th>Categories</th>
     </tr>
     <tr>
-      <td>This view file</td>
+      <td><% @category_names.each do |category| %></td>
+            <a href="/category/<%= category %>"><%= category %></a>
+          <% end %>
       <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
     </tr>
     <tr>
