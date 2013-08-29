@@ -8,3 +8,4 @@ def names(objects)
   objects.each { |obj| name_array << obj.name }  
   name_array
 end
+

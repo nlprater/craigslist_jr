@@ -1,18 +1,5 @@
-<div class="container">
-  <h1><%= @category %></h1>
-  <h2>All Posts</h2>
+<h1><%= @category %></h1>
 
-
-
-  <body>
-  
-      
-    
-    
-      <% @posts.each do |post| %>
-            <a href="/post/<%= post.id %>"><%= post.title %></a>
-          <% end %>
-    
-  
-  </body>
-</div>
+<% @posts.each do |post| %>
+  <p><a href="/posts/<%= post.id %>"><%= post.title %></a></p>
+<% end %>

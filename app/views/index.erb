@@ -1,24 +1,7 @@
-<div class="container">
-  <h1>Seanslist</h1>
-  <p>All Categories</p>
+<h1>Seanslist</h1>
 
-  <table>
-    <tr>
-      <th>Categories</th>
-    </tr>
-    <tr>
-      <td><% @category_names.each do |category| %></td>
-            <a href="/category/<%= category %>"><%= category %></a>
-          <% end %>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
-</div>
+<% @category_names.each do |category| %>
+  <p><a href="/category/<%= category %>"><%= category %></a></p>
+<% end %>
+
+<p><a href="/posts/new">Create a new ad posting</a></p>
